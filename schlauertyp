@@ -1,6 +1,6 @@
 #! /usr/bin/env ruby
 
-start =[
+START_COMPONENTS = [
   'Mut ist',
   'Leichtsinn ist',
   'Verantwortung ist',
@@ -53,7 +53,7 @@ start =[
   'Ein letztes Bier ist'
 ]
 
-middle = [
+MIDDLE_COMPONENTS = [
   'letztlich',
   'sozusagen',
   'am Ende des Tages',
@@ -106,7 +106,7 @@ middle = [
   'in anderen Kulturkreisen',
 ]
 
-finito = [
+END_COMPONENTS = [
   'die höchste Tugend',
   'die Basis des Zusammenlebens',
   'eine gesellschaftliche Pflicht',
@@ -159,4 +159,4 @@ finito = [
   'nichts wert',
 ]
 
-puts "#{start.sample} #{middle.sample} #{finito.sample}"
+puts "#{START_COMPONENTS.sample} #{MIDDLE_COMPONENTS.sample} #{END_COMPONENTS.sample}"
