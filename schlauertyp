@@ -159,14 +159,27 @@ END_COMPONENTS = %[
   nichts wert
 ]
 
-def sample_component(components)
-  components.split(/\n\s*/).reject(&:empty?).sample
+class SentenceGenerator
+  def initialize(start_components, middle_components, end_components)
+    @start_components = start_components
+    @middle_components = middle_components
+    @end_components = end_components
+  end
+
+  def sentence
+    [
+      sample_component(@start_components),
+      sample_component(@middle_components),
+      sample_component(@end_components)
+    ].join(' ')
+  end
+
+  private
+
+  def sample_component(components)
+    components.split(/\n\s*/).reject(&:empty?).sample
+  end
 end
 
-sentence = [
-  sample_component(START_COMPONENTS),
-  sample_component(MIDDLE_COMPONENTS),
-  sample_component(END_COMPONENTS)
-].join(' ')
-
-puts sentence
+generator = SentenceGenerator.new(START_COMPONENTS, MIDDLE_COMPONENTS, END_COMPONENTS)
+puts generator.sentence
