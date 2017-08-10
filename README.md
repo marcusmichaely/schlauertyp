@@ -1,4 +1,5 @@
 # schlauertyp
+![](https://github.com/DSIW/schlauertyp/blob/master/logo.png)
 This little script is inspired by a birthdaypresent from my friends Valentin and Insa.
 
 [Der Moral-o-mat](https://de-de.facebook.com/sinnfragenkombinator/)
